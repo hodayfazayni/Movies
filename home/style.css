@@ -1,0 +1,76 @@
+/* ||General Styles|| */
+/* get fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&family=Geom:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+/* variables */
+:root{
+    /*colors*/
+    --body-bg: #522258;
+    --sub-bg: #8C3061;
+    --text-cl: #D95F59;
+    --button-bg: #C63C51;
+    /*fonts*/
+    --heading-font: 'Cause', sans-serif;
+    --text-font: 'Geom', sans-serif;
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+/* ||Nav bar styles|| */
+aside{
+    display: none;
+}
+nav{
+    width: 30vw;
+    position: fixed;
+    height: 100vh;
+    background-color: var(--sub-bg);
+}
+.showNav, #hideNav{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    display: block;
+    position: fixed;
+}
+aside nav a{
+    text-decoration: none;
+    color: var(--button-bg);
+    font-family: var(--text-font);
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+aside nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5rem;
+    justify-content: center;
+}
+nav ul li a:hover{
+    color: var(--text-cl);
+}
+
+/* ||Main content styles|| */
+
+#container{
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
